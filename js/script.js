@@ -1,18 +1,18 @@
 function calculatePerimeter()
 {
-    let side1 = parseFloat(document.getElementById("side1").value);
-    let side2 = parseFloat(document.getElementById("side2").value);
-    let side3 = parseFloat(document.getElementById("side3").value);
+    let firstSide = parseFloat(document.getElementById("firstSide").value);
+    let secondSide = parseFloat(document.getElementById("secondSide").value);
+    let thirdSide = parseFloat(document.getElementById("thirdSide").value);
 
-    if (isNaN(side1) || isNaN(side2) || isNaN(side3))
+    if (isNaN(firstSide) || isNaN(secondSide) || isNaN(thirdSide))
     {
         document.getElementById("result-perimeter").innerHTML = "Masukkan Angka Terlebih Dahulu";
         return;
     }
 
-    let perimeter = side1 + side2 + side3;
+    let perimeter = firstSide + secondSide + thirdSide;
     let formula = "K = s1 + s2 + s3"
-    document.getElementById("result-perimeter").innerHTML = formula +"<br>" + "K =" + side1 + "+" + side2 + "+" + side3 +"<br>" + "K =" + perimeter;
+    document.getElementById("result-perimeter").innerHTML = formula +"<br>" + "K =" + firstSide + "+" + secondSide + "+" + thirdSide +"<br>" + "K =" + perimeter;
 
 }
 
@@ -34,9 +34,9 @@ function calculateArea()
 
 function resetFormPerimeter() 
 {
-    document.getElementById("side1").value = "";
-    document.getElementById("side2").value = "";
-    document.getElementById("side3").value = "";
+    document.getElementById("firstSide").value = "";
+    document.getElementById("secondSide").value = "";
+    document.getElementById("thirdSide").value = "";
     document.getElementById("result-perimeter").innerHTML = "";
 }
 
